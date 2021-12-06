@@ -1,0 +1,24 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    claim-technical:
+      jdbc-url: jdbc:h2:mem:testdb
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+    claim-functional:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/claim-funtional
+      username: root
+      password:
+  data:
+    rest:
+      default-media-type: application/json
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8082
